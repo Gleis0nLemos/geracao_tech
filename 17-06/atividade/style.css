@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c0c0c;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+span {
+  color: aquamarine;
+  font-weight: 700;
+}
+
+.bio p {
+  padding: 10px;
+  background-color: rgb(54, 54, 54);
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.stacks {
+  padding: 1rem;
+  background-color: rgb(24, 24, 24);
+}
+
+h2 {
+  font-size: 2em;
+}
+
+ul {
+  list-style-type: none;
+  background-color: #1f1f1f;
+  padding: 20px;
+}
+
+.php {
+  color: blue;
+}
+
+.laravel {
+  color: red;
+}
+
+.sql {
+  color: yellow;
+}
+
+.html {
+  color: green;
+}
+
+.css {
+  color: blueviolet;
+}
+
+.js {
+  color: orange;
+}
