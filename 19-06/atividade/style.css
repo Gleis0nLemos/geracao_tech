@@ -28,6 +28,11 @@
   align-items: center;
 }
 
+.text-container {
+  margin: 0 20px;
+  text-align: justify;
+}
+
 .content-title {
   justify-content: center;
   color: purple;
