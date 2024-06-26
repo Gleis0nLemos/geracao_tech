@@ -12,7 +12,7 @@ let pessoa = {
   },
   rosto: {
     olhos: "castanhos",
-    temCabelo: true
+    temCabelo: true,
   }
 }
 
