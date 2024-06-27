@@ -3,10 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css">
   <title>Javascript - aula11</title>
 </head>
 <body>
-  
+  <header>
+    <input type="text" id="busca" placeholder="Pesquisar por título" >
+  </header>
+  <main>
+    <section id="tarefas">
+      <h2>Tarefas <button>Nova Tarefa</button></h2>
+      <h6>Nenhuma tarefa registrada</h6>
+    </section>
+    <section id="overlay"></section>
+    <div class="modal">
+      <form>
+        <h3>Criar Tarefa</h3>
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo">
+        <label for="descricao">Descricão</label>
+        <textarea name="" id="descricao"></textarea>
+        <button>Criar</button>
+      </form>
+    </div>
+  </main>
   <script src="index.js"></script>
 </body>
 </html>
