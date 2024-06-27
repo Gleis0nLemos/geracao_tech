@@ -1,3 +1,9 @@
+// OPERADORES DE ATRIBUIÇÃO: =, +=, -=, *=, /=, %=	
+
+// OPERADORES DE COMPARACAO: ==, ===, !=, !==, >, <, >=, <=
+
+// OPERADORES LOGICOS: &&, ||, !
+
 let num1 = Number(prompt("Numero 1"));
 let num2 = Number(prompt("Numero 2"));
 
