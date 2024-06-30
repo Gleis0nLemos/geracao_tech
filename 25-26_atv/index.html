@@ -12,18 +12,18 @@
   </header>
   <main>
     <section id="tarefas">
-      <h2>Tarefas <button onclick="novaTarefa()">Nova Tarefa</button></h2>
+      <h2>Tarefas <button onclick="abrirModal()">Nova Tarefa</button></h2>
       <!-- <h6>Nenhuma tarefa registrada</h6> -->
       <ul id="lista"></ul>
     </section>
     <section id="overlay" onclick="fecharModal()"></section>
     <div class="modal" id="criarTarefa">
-      <form>
+      <form onsubmit="novaTarefa(event)">
         <h3>Criar Tarefa<box-icon name='x' size="md" onclick="fecharModal()"></box-icon></h3>
         <label for="titulo">Título</label>
-        <input type="text" id="titulo">
+        <input type="text" id="titulo" required>
         <label for="descricao">Descricão</label>
-        <textarea name="" id="descricao"></textarea>
+        <textarea name="" id="descricao" required></textarea>
         <button>Criar</button>
       </form>
     </div>
