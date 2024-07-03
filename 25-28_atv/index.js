@@ -51,6 +51,8 @@ function novaTarefa() {
   .then(res => {
     fecharModal();
     buscarTarefas();
+    let form = document.querySelector('#criarTarefa form')
+    form.reset();
   })
 }
 
@@ -60,6 +62,7 @@ function deletarTarefa(id) {
   })
   .then(res => res.json())
   .then(res => {
+    alert("Tarefa excluída com sucesso!")
     buscarTarefas();
   })
 }
