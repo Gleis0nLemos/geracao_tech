@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+  <title>Javascript aula10 - Requisicoes HTTP</title>
+</head>
+
+<body>
+  <form>
+    <div>
+      <label for="regioes">Regiões</label>
+      <select id="regioes" onchange="buscarEstados()">
+        <option>Selecione uma região</option>
+      </select>
+    </div>
+    <div>
+      <label for="estados">Estados</label>
+      <select id="estados" onchange="buscarCidades()">
+        <option value="">Selecione um estado</option>
+      </select>
+    </div>
+    <div>
+      <label for="cidades">Cidades</label>
+      <select id="cidades">
+        <option value="">Selecione uma cidade</option>
+      </select>
+    </div>
+  </form>
+</body>
+
+</html>
