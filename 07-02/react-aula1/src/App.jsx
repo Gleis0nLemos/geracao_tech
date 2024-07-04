@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const Hello = () => {
   return (
-    <div className="App">
-      <h1>Olá, React!</h1>
-      <button onClick={ () => setCount((count) => count + 1)}>
+    <h1>Olá, Mundo!</h1>
+  );
+};
 
-      Contador: {count} </button> 
+const App = () => {
+  return (
+    <div>
+      <Hello />
     </div>
   );
-}
+};
 
 export default App
