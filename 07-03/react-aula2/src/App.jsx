@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from './components/Header';
-import Banner from './components/Banner';
+import { Componente1, Componente2, Componente3 } from './components/VariosComponentes';
 
 function App() {
 
   return (
     <>
       <div>
-        <Header />
-        <Banner />
+        <Componente1 />
+        <Componente2 />
+        <Componente3 />
       </div>
     </>
   )

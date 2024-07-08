@@ -7,6 +7,10 @@ const App = () => {
     // parte visível do component
 
     /* Pode ser dessa forma também
+
+    fazendo os imports no começo do arquivo
+    import React from 'react';
+    
     return (
       <React.Fragment>
         <Header />
@@ -14,9 +18,7 @@ const App = () => {
       </React.Fragment>
     )
 
-    fazendo os imports no começo do arquivo
-    import React from 'react';
-    import {fragment} from 'react';
+    
     */
     <>
       <Header />  
