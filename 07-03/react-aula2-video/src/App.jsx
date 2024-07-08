@@ -1,5 +1,6 @@
 
 import Banner from "./components/Banner";
+import FormaDeBolo from "./components/FormaDeBolo";
 import Header from "./components/Header";
 import { Componente1, Componente2, Componente3 } from "./components/VariosComponentes";
 
@@ -22,11 +23,13 @@ const App = () => {
     
     */
     <>
-      <Header />  
+      {/* <Header />  
       <Banner />
       <Componente1 />
       <Componente2 />
-      <Componente3 />
+      <Componente3 /> */}
+      <FormaDeBolo sabor="Laranja" cobertura="Chocolate"/>
+      <FormaDeBolo sabor="Chocolate" cobertura="Chantilly"/>  
     </>
   );
 }
