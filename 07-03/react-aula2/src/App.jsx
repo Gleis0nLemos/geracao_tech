@@ -1,16 +1,13 @@
 import React from 'react';
-import { Componente1, Componente2, Componente3 } from './components/VariosComponentes';
+import FormaDeBolo from './components/FormaDeBolo';
 
 function App() {
 
   return (
-    <>
-      <div>
-        <Componente1 />
-        <Componente2 />
-        <Componente3 />
-      </div>
-    </>
+    <div>
+      <FormaDeBolo sabor="Limão" cobertura="Menta" />
+      <FormaDeBolo sabor="Leite condensado" cobertura="Chocolate" />
+    </div>
   )
 }
 
