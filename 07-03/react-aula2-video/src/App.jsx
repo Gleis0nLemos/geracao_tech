@@ -1,4 +1,3 @@
-
 import Banner from "./components/Banner";
 import FormaDeBolo from "./components/FormaDeBolo";
 import Header from "./components/Header";
@@ -18,13 +17,11 @@ const App = () => {
         <Header />
         <Banner />  
       </React.Fragment>
-    )
-
-    
+    ) 
     */
     <>
       {/* <Header />  
-      <Banner />
+      <Banner /> 
       <Componente1 />
       <Componente2 />
       <Componente3 /> */}
