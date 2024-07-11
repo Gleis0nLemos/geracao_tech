@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
@@ -15,7 +15,7 @@ const Nav = styled.nav`
   gap: 20px;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
 
@@ -25,23 +25,12 @@ const StyledLink = styled(Link)`
   }
 `;
 const Header = () => {
-  const location = useLocation();
   return (
     <>
       <HeaderContainer>
         <Nav>
-          <StyledLink 
-            to="/" 
-            className={location.pathname === "/" ? "active" : ""}
-          >
-            Home
-          </StyledLink>
-          <StyledLink 
-            to="/products"
-            className={location.pathname.startsWith("/products") ? "active" : ""}
-          >
-            Products
-          </StyledLink>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/products">Products</StyledLink>
         </Nav>
       </HeaderContainer>
     </>
