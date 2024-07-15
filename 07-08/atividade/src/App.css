@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(14, 4, 4);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0 20px 0;
+  height: 10vh;
+  background-color: rgb(19, 19, 19);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.header h1:hover {
+  color: aquamarine;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: rgb(194, 194, 194);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition-delay: 100ms;
+}
+
+.nav-links a:hover {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.home {
+  background-color: rgb(19, 19, 19);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 40%;
+  height: 40vh;
+  border-radius: 10px;
+}
+
+.user {
+  background-color: rgb(19, 19, 19);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 40%;
+  height: 40vh;
+  border-radius: 10px;
+}
+
+.form { 
+  background-color: rgb(27, 27, 27);
+  border-radius: 10px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;  
+}
+
+.form button {
+  background-color: rgb(92, 0, 0);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.content-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex: 1;
+  padding-bottom: 100px;
+}
+
+.main-content {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(4, 22, 22);
+  height: 90vh;
+  width: 40vh;
+  padding-bottom: 100px;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0 20px 0;
+  height: 10vh;
+  text-align: center;
+  background-color: rgb(19, 19, 19);
+}
