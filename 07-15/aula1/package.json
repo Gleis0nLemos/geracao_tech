@@ -1,0 +1,12 @@
+{
+  "name": "aula1",
+  "version": "1.0.0",
+  "main": "primeiro-programa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gleison Lemos",
+  "license": "ISC",
+  "description": "Aula de Backend"
+}
