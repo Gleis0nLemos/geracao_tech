@@ -1,0 +1,16 @@
+{
+  "name": "aula-backend2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Aula de Back-end com Node.js",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
