@@ -24,3 +24,10 @@ const pessoa3 = new Pessoa('João', '456.123.789-00', 28);
 pessoa1.correr(); // José está correndo.
 pessoa2.dormir(); // Maria está dormindo.
 pessoa3.correr(); // João está correndo.
+
+// Manipulação de instâncias
+const pessoaAuxiliar = pessoa1;
+pessoaAuxiliar.nome = 'Alice';
+
+console.log(pessoa1.nome); // Alice
+console.log(pessoaAuxiliar.nome); // Alice
