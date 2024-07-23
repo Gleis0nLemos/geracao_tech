@@ -10,7 +10,7 @@
   "author": "Gleison Lemos",
   "license": "ISC",
   "description": "Servidor Node.js básico",
-  "devDependencies": {
+  "dependencies": {
     "nodemon": "^3.1.4"
   }
 }
