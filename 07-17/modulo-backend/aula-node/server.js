@@ -1,44 +1,26 @@
-const http = require('http');
-const url = require('url');
+const http =  require('http');
 
 const server = http.createServer((req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-  const query = parsedUrl.query;
-
-  /*
-   `200`: OK
-   `201`: Created
-   `400`: Bad Request
-   `401`: Unauthorized
-   `404`: Not Found
-   `500`: Internal Server Error
-  */  
-  res.statusCode = 200;
-
-  /*
-   `text/html` para HTML
-   `application/json` para JSON
-   `application/pdf` para PDF
-   */
-  res.setHeader('Content-Type', 'text/html');
-  res.end(`
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-      </head>
-      <body>
-        <h1>Olá, ${query.name}!</h1>
-      </body>
-    </html>
-  `)
+  const { url, method } = req;
+  
+  if (url === '/' && method === 'GET') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Servidor Node.js');  
+  } else if (url === '/produtos' && method === 'GET') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Listagem de Produtos');  
+  } else {
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Página não encontrada');
+  }
 })
 
+const hostname = '127.0.0.1';
 const port = 3000;
-const host = '127.0.0.1';
 
-server.listen(port, host, () => {
-  console.log(`Server running at http://${host}:${port}`)
+server.listen(port, hostname, () => {
+  console.log(`Server runnig at http://${hostname}:${port}/`);
 })
