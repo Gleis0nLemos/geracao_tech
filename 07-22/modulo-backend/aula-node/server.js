@@ -3,24 +3,39 @@ const Produto = require('./produtos.js');
 
 const server = http.createServer((req, res) => {
   const { url, method } = req;
+  res.setHeader('Content-Type', 'application/json');
   
-  if (url === '/') {
-    res.statusCode = 200;
-    res.end('Servidor Node.js');  
-
-  } else if (url === '/produtos') {
+  if (url === '/produtos' && method === 'GET') {
     res.statusCode = 200;
     res.end(Produto.listarProdutos()); 
 
-  } else if (url === '/produtos/adicionar') {
-    const novoProduto = new Produto(3, 'Monitor', 800);
+  } else if (url === '/produtos/' && method === 'POST') {
+    const novoProduto = Produto.adicionarProduto({
+      id: 3,
+      nome: 'Mouse',
+      valor: 50
+    })
 
     res.statusCode = 201;
-    res.end(Produto.adicionarProduto(novoProduto))
+    res.end(novoProduto);
 
-  } else if (url === '/produtos/remover') {
+  } else if (url.match(/\produtos\/\d+/) && method === 'PUT') {
+    const id = parseInt(url.split('/')[2]);
+
+    Produto.editarProduto(id, { 
+      nome: 'Teclado Mecânico', 
+      valor: 200 
+    });
+
     res.statusCode = 200;
-    res.end(Produto.removerProduto())
+    res.end('Produto editado com sucesso')
+
+  } else if (url.match(/\produtos\/\d+/) && method === 'DELETE') {
+    const id = parseInt((url.split('/')[2]));
+
+    Produto.removerProduto(id)
+    res.statusCode = 200;
+    res.end('Produto removido com sucesso')
 
   } else {
     res.statusCode = 404;
