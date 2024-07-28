@@ -1,5 +1,4 @@
 class Produto {
-
   static produtos = [
     {
       id: 1,
@@ -22,22 +21,29 @@ class Produto {
       id: id,
       nome: nome,
       valor: valor
-    })
+    });
+
+    console.log(Produto.produtos);
+
+    return 'Produto adicionado com sucesso';
   }
 
-  static editar(indice) {
-
+  static editar(indice, id, nome, valor) {
+    if (Produto.produtos[indice]) {
+      Produto.produtos[indice] = { id, nome, valor };
+      return 'Produto editado com sucesso';
+    }
+    return 'Produto não encontrado';
   }
 
+  // http://127.0.0.1:3000/produtos?indice=id
   static excluir(indice) {
-    Produto.produtos.splice(indice, 1);
+    if (Produto.produtos[indice]) {
+      Produto.produtos.splice(indice, 1);
+      return 'Produto excluído com sucesso';
+    }
+    return 'Produto não encontrado';
   }
- }
+}
 
-module.exports = Produto
-
-// CRUD
-// C - CREATE
-// R - READ
-// U - UPDATE
-// D - DELETE
+module.exports = Produto;
