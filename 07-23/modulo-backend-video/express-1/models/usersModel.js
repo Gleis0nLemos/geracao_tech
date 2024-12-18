@@ -1,24 +1,32 @@
-class usersModel {
+class UsersModel {
 
-  listar() {
+  static lista = [
+    {
+      "nome": "João",
+      "login": "joao"
+    }
+  ]
+
+  static listar() {
+    
+    return UsersModel.lista;
+  }
+
+  static consultarPorId() {
     
   }
 
-  consultarPorId() {
+  static criar(data) {
+    UsersModel.lista.push(data)
+  }
+
+  static atualizar() {
     
   }
 
-  criar() {
-    
-  }
-
-  atualizar() {
-    
-  }
-
-  deletar() {
+  static deletar() {
     
   }
 }
 
-module.exports = usersModel
+module.exports = UsersModel

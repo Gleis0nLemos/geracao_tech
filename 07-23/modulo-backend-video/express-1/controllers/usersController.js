@@ -1,36 +1,36 @@
-const usersModel = require('../models/usersModel')
+const UsersModel = require('../models/usersModel')
 
-class usersController {
+class UsersController {
   
-  listar() {
-    const usersModel = new usersModel()
+  listar(req, res) {
+    const dados = UsersModel.listar()
 
-    return usersModel.listar()
+    return res.status(200).json(dados)
   }
 
-  consultarPorId() {
-    const usersModel = new usersModel()
+  consultarPorId(req, res) {
 
-    return usersModel.listar()
+    return UsersModel.consultarPorId()
   }
 
-  criar() {
-    const usersModel = new usersModel()
+  criar(req, res) {
+    const body = req.body
+    UsersModel.criar(body)
 
-    return usersModel.criar()
+    return res.status(200).json({
+      message: 'Usuário criado com sucesso'
+    })
   }
 
-  atualizar() {
-    const usersModel = new usersModel()
+  atualizar(req, res) {
 
-    return usersModel.atualizar()
+    return UsersModel.atualizar()
   }
 
-  deletar() {
-    const usersModel = new usersModel()
+  deletar(req, res) {
 
-    return usersModel.deletar()
+    return UsersModel.deletar()
   }
 }
 
-module.exports = usersController
+module.exports = UsersController

@@ -1,11 +1,13 @@
 const express = require('express');
-const usersController = require('../controllers/usersController');
+const UsersController = require('../controllers/usersController');
 const usersRoutes = express.Router();
 
-const usersController = new usersController();
+const usersController = new UsersController();
 
 // CRUD
 usersRoutes.get('/users', usersController.listar);
+
+usersRoutes.get('/users/:id', usersController.consultarPorId);
 
 usersRoutes.post('/users', usersController.criar);
 
